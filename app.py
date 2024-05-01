@@ -6,7 +6,8 @@ import random
 
 ui.page_opts(title="Penguins dashboard", fillable=True)
 
-webUrl = request.urlopen(f"gist.githubusercontent.com/vivid-storage/8c3c5ffc83e847f34e46aa77a21327f4/raw?cachebust={random.randint(1,100000)}")
+#webUrl = request.urlopen(f"gist.githubusercontent.com/vivid-storage/8c3c5ffc83e847f34e46aa77a21327f4/raw?cachebust={random.randint(1,100000)}")
+webUrl = request.urlopen(f"gist.githubusercontent.com/vivid-storage/8c3c5ffc83e847f34e46aa77a21327f4/raw")
 data = webUrl.read().decode("utf-8")
 
 print(f"Success gist: {data}")
